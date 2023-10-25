@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    color:white
+}
+
+h1 span{
+    color: rgb(247, 247, 5);
+}
+
+.background-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #041868, #000000);
+    z-index: -1;
+    animation: backgroundAnimation 10s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 40vh;
+    width: 70vw;
+    border: 4px solid cyan;
+    box-sizing: border-box;
+    margin-top: 20px;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 30px;
+    background-color: rgb(149, 255, 255);
+    display: inline-block;
+    margin-left: 2px;
+    transition: height 0.3s ease;
+}
+
+.highlight {
+    background-color: red;
+}
+
+.sort-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #cabff0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sort-button:hover {
+    background-color: #90d84d;
+}
